@@ -74,7 +74,7 @@ public class ExcelMultiColumnToCsv {
         fos.write(0xEF); fos.write(0xBB); fos.write(0xBF); // UTF-8 BOM
         try (Writer writer = new OutputStreamWriter(fos, StandardCharsets.UTF_8)) {
             for (List<String> row : resultRows) {
-                writer.write(String.join(";", row).replace("\"", "\"\""));
+                writer.write(String.join("\t", row).replace("\"", "\"\""));
                 writer.write("\n");
             }
             System.out.println("✅ CSV-файл сохранен в UTF-8: " + csvOutputPath);
@@ -187,8 +187,9 @@ public class ExcelMultiColumnToCsv {
                 String fabulaToSearch = rowOutput.get(columnNumberToSearch);
                 for (String militaryPersonnelToSearch:listToFind){
                     if(fabulaToSearch.toLowerCase().contains(militaryPersonnelToSearch.toLowerCase())) {
-                        System.out.println(rowOutput.get(columnNumberToSearch));
+                        //System.out.println(rowOutput.get(columnNumberToSearch));
                         resultRows.add(rowOutput);
+                        System.out.println(militaryPersonnelToSearch);
                     }
                 }
                 //enp}
@@ -206,3 +207,4 @@ public class ExcelMultiColumnToCsv {
         }
     }
 }
+//test
