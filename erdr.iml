@@ -57,5 +57,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../Install/Java/poi-bin-5.2.3/ooxml-lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../../../Install/Java/poi-bin-5.2.3/ooxml-lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
